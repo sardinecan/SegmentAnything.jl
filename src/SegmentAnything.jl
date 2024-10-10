@@ -6,19 +6,19 @@ using Images
 using Colors
 
 # declare python env
-const path = @__DIR__
-const parent_dir = dirname(path)
+path = @__DIR__
+parent_dir = dirname(path)
 ENV["PYTHON"] = joinpath(parent_dir, "deps", "python", ".venv", "bin", "python")
 Pkg.build("PyCall")
 using PyCall
 
 
 # load python libraries
-const segment_anything = pyimport("segment_anything")
-const cv2 = pyimport("cv2")
-const plt = pyimport("matplotlib.pyplot")
-const np = pyimport("numpy")
-const torch = pyimport("torch")
+segment_anything = pyimport("segment_anything")
+cv2 = pyimport("cv2")
+plt = pyimport("matplotlib.pyplot")
+np = pyimport("numpy")
+torch = pyimport("torch")
 
 
 """
@@ -147,4 +147,4 @@ function show_anns_jl(anns, image)
     display(plot(img_final_rgb, axis=false, legend=false))
 end
 
-end # module SegmentAnything
+end
