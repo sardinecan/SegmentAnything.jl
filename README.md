@@ -37,3 +37,15 @@ pip3 install -r requirements.txt
 - Then, load the module: `julia> include("SegmentAnything.jl")`
 
 ## Getting Started
+
+### Automatic segmentation
+To perform an automatic segmentation, just run the `segment_image()` function. This function takes two arguments, the `image path` and a `sam checkpoint` (`vit_b`, `vit_l` or `vit_h`).
+```julia
+julia> image = "path/to/image"
+julia> segmentation =  SegmentAnything.segment_image(image, "vit_b")
+```
+
+To display the masks over image, use the `show_anns_jl()` function.
+```julia
+julia> SegmentAnything.show_anns_jl(segmentation, image)
+```
