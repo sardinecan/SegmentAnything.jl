@@ -6,5 +6,5 @@ onnxruntime==1.16.3
 opencv-python==4.9.0.80
 pycocotools==2.0.7
 segment-anything @ git+https://github.com/facebookresearch/segment-anything.git@6fdee8f2727f4506cfbbe553e23b895e27956588
-torch==1.10.1
-torchvision==0.11.2
+torch==1.13.0
+torchvision==0.14.0

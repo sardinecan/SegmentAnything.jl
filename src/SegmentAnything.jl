@@ -28,8 +28,11 @@ function detect_device()
     if torch.cuda.is_available()
         println("CUDA is available")
         return "cuda"
+    elseif torch.backends.mps.is_available()
+        println("mps is available")
+        return "mps"
     else
-        println("CUDA is not available: CPU selected")
+        println("CUDA and MPS are not available: CPU selected")
         return "cpu" 
     end
     
