@@ -4,12 +4,13 @@ using Pkg
 using Plots
 using Images
 using Colors
-
+using CondaPkg
+#using PythonCall
 # declare python env
 path = @__DIR__
 parent_dir = dirname(path)
-ENV["PYTHON"] = joinpath(parent_dir, "deps", "python", ".venv", "bin", "python")
-Pkg.build("PyCall")
+#ENV["PYTHON"] = joinpath(parent_dir, "deps", "python", ".venv", "bin", "python")
+#Pkg.build("PyCall")
 using PyCall
 
 
